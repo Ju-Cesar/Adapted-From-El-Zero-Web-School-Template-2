@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Template 2</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- Main CSS File -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- Google Font Montserrat -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <header>
+            <div class="container">
+                <a href="#" class="logo"><img src="images/logo.png" alt="Logo"></a>
+                <div class="menu-search">
+                    <div id="open-menu" class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span></span>
+                    <a id="search-icon" class="search" href="#"><i class="fas fa-search"></i></a>
+                    <div class="search-form">
+                        <input type="search" name="searchInp">
+                        <input type="submit" value="Search">
+                    </div>
+                </div>
+                <nav>
+                    <div id="close-menu" class="close-menu-btn"></div>
+                    <ul>
+                        <li class="current"><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+        
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <!-- Hero Section Start -->
+        <section class="hero">
+            <div class="container">
+                <div class="content">
+                    <h1>Hello World!<br>We Are Kasper We Make Art.</h1>
+                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+                </div>
+                <div class="circles">
+                    <span></span>
+                    <span class="filled"></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- JS code to open an close menu on small screens Start -->
+        <script>
+            const openMenu = document.getElementById("open-menu");
+            const closeMenu = document.getElementById("close-menu");
+            const searchIcon = document.getElementById("search-icon");
+            const navigation = document.querySelector("nav");
+            const searchInput = document.querySelector(".search-form");
+            openMenu.addEventListener('click', ()=>{
+                navigation.classList.add("show-menu");
+                searchInput.classList.remove("show-search-form");
+            });
+            searchIcon.addEventListener('click',()=>{
+                if(searchInput.classList.contains("show-search-form")){
+                searchInput.classList.remove("show-search-form");
+                } else {
+                    searchInput.classList.add("show-search-form");
+                }
+
+            })
+            closeMenu.addEventListener('click', ()=>{
+                navigation.classList.remove("show-menu")
+            });
+        </script>
+        <!-- JS code to open an close menu on small screens End -->
+    </body>
+</html>
